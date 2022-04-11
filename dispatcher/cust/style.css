@@ -537,16 +537,7 @@ label{
     width: 80px;
 }
 
-.control-close {
-	
-	position: relative;
-    bottom: 120px;
-    left: 940px;
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background: url(../../images/close_form.svg) 0 0 no-repeat;
-}
+
 
 .fadep {
 	display: none;
