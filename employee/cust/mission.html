@@ -62,7 +62,7 @@
                     </div>
                     <div class="control_main">
                         <section class="control_sec">
-                            <a href="#" id="control_form" class="control_a"><div class="control-menu"> 
+                            <a href="#" id="control_form" class="control_a"><div class="control-menu" id="control_1"> 
                                 <div class="control-levo">
                                     <div class="levo-verh">
                                         Заявление №...
@@ -92,7 +92,7 @@
                 </div>
                 <form id="solid">
                     <div class="file_div">
-                    <input type="file" id="addImages" multiple="">
+                    <input type="file" id="addImages" multiple="" required>
                     </div>
                     <div class="div_butt">
                     <input type="button" id="vse" value="Отправить">
@@ -142,6 +142,13 @@
  
 
 
+
+});
+$('#vse').click(function(){
+
+
+$('.fadep').hide();
+$('#control_1').css("backgroundImage","linear-gradient(45deg, rgba(47, 232, 6, 0.8), rgba(255, 255, 255, 0.673)),  url(../../images/fon_miss2.jpg)");
 
 });
           

@@ -436,7 +436,9 @@ a.button7:active {
 .control-menu{
     display: flex;
     flex-direction: row;
-    background:  url(../../images/fon_miss2.jpg) ;
+    
+    background:   url(../../images/fon_miss2.jpg); 
+    
     background-size: 100%;
     height: 150px;
     margin-bottom: 30px;
