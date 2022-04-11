@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <p class="zag">Профиль</p>
+      <ul>
+        <li class="li_zap">ФИО : Тюрин Н.Е</li>
+        <li class="li_zap">Дом : Большая Красная 12</li>
+        <li class="li_zap">Квартира : 339</li>
+        <li class="li_zap">Должность : Пользователь</li>
+        
+      </ul>
+      <p class="exip"><a href="#" class="exit">Выход</a></p>
+      </div>
+        <section class="MAIN">
+        <div id="leftSidebar">
+            <button class="first2" onclick="openNav()" type="button" ></button>
+  
+  
+ 
+ 
+            <aside class="sidebar">
+                <div class="name">ООО «Управляющая компания «Плюшевая прошка»</div>
+            <hr/>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="news/news.html">
+                            <i class="i_news"></i>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="kont/tsz.html">
+                            <i class="i_tsz"></i>
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="otchet/otchet.html">
+                            <i class="i_otchet"></i>
+                            <span>Отчетность</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cust/custom.html">
+                            <i class="i_custom"></i>
+                            <span>Подача заявлений</span>
+                        </a>
+                    </li>
+                    
+                
+                </ul>
+            </nav>
+        </aside>
+            
+                
+           
+            
+        </div>
+        <div id="main">
+            <img class="fon" src="../images/back.jpg" style="width: 1195px; height: 500px;">
+        </div>
+        <div id="glav">
+          <div class="table">
+              <div class="table_left">
+                <div class="glav_name">ООО «Управляющая компания «Плюшевая прошка»</div>
+              </div>
+              <div class="table_right">
+                  <p class="news">
+                      <p><i class="date">31 января 2022</i></p>
+                      <p><a href="news/news.html">Изменение тарифов на &quot;Содержание&quot; и Текущий ремонт&quot;</a></p>
+                      <p><span class="text"><b><u>Изменение тарифов с 01.02.2022 года</u></b><br></p>
+                      <p><b><u>(установлены&nbsp;...</u></b></p>  
+                    </span>
+
+                  </p>
+              </div>  
+          </div>  
+
+        </div>
+
+        
+        </section>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+                
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                
+            }
+            </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Авторизация</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="form_act">
+<form action="/action_page.php" method="post" >
+  <div class="imgcontainer">
+    <img src="../images/avatar_1.svg" alt="Avatar" style="width: 80px; height: 80px;" class="avatar">
+  </div>
+
+  <div class="container">
+    <label class="user" for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label class="pas" for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label class="rem">
+      <input type="checkbox"  checked="checked" name="remember" > Remember me
+    </label>
+  </div>
+
+  <div class="container" >
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#" class="a_pass">password?</a></span>
+  </div>
+</form>
+</div>
+</body>
+</html>

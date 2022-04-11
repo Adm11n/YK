@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация пользователей</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+    <script type="text/javascript" src="../../jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <p class="zag">Профиль</p>
+      <ul>
+        <li class="li_zap">ФИО : Тюрин Н.Е</li>
+        <li class="li_zap">Должность : Администратор</li>
+        
+      </ul>
+      <p class="exip"><a href="#" class="exit">Выход</a></p>
+      </div>
+        <section class="MAIN">
+        <div id="leftSidebar">
+            <button class="first2" onclick="openNav()" type="button" ></button>
+  
+  
+ 
+           
+            <aside class="sidebar">
+                <div class="name"><a href="#" style="text-decoration: none; color: rgb(190, 190, 190); ">ООО «Управляющая компания «Плюшевая прошка»</a></div>
+            <hr/>
+            <nav class="menu">
+                <ul>
+                   
+                    <li class="active">
+                        <a href="#">
+                            <i class="i_custom"></i>
+                            <span>Регистрация аккаунтов</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+            
+                
+           
+            
+        </div>
+        <div id="main">
+            <section class="content">
+                <div class="container">
+
+                    <h1>Регистрация аккаунтов</h1>
+                            <hr/>
+                            <form name="statement" id="statementForm" enctype="text/plain" >
+                                <div class="form">
+                            
+                                                               
+                                                                           
+                                                                            <div class="row_counter">
+                                                <div class="col-sm-6">
+                                                    <label for="">ФИО</label>
+                                                    <input type="text" name="FIO" class="form-control"
+                                                                                                        id="fio"
+                                                                                                        required     />
+                                                </div>
+                                            </div>
+
+                                            <div class="row counter">
+                                                <div class="col-sm-8">
+                                                    <label for="">Должность</label>
+                                                    <select class="form-control" name="positions" id="position">
+                                                                                        <option value="13">Выберите Должность</option>
+                                                                                            <option value="14">Пользователь</option>
+                                                                                            <option value="12">Сотрудник</option>
+                                                                                            <option value="10">Диспетчер</option>
+                                                                                            <option value="11">Администратор</option>
+                                                                                            
+                                                                                    </select>
+                                                </div>
+                                            </div>   
+                                            
+                                            <div class="row counter">
+                                                <div class="col-sm-8_user" id="sotr-id">
+                                                    <label for="">Должность Сотрудника</label>
+                                                    <select class="form-control" name="positions" id="Position">
+                                                                                        <option value="4">Выберите Должность</option>
+                                                                                            <option value="1">Электрик</option>
+                                                                                            <option value="2">Дворник</option>
+                                                                                            <option value="3">Еще кто то</option>
+                                                                                           
+                                                                                            
+                                                                                    </select>
+                                                </div>
+                                            </div>             
+
+                                            <div class="row_counter">
+                                                <div class="col-sm-6_user" id="home-id">
+                                                    <label for="">Дом</label>
+                                                    <input type="text" name="HOME" class="form-control"
+                                                                                                        id="home"
+                                                                                                        required  />
+                                                </div>
+                                            </div>
+                                            <div class="row_counter">
+                                                <div class="col-sm-6_user" id="apart-id">
+                                                    <label for="">Квартира</label>
+                                                    <input type="text" name="APART" class="form-control"
+                                                                                                        id="apart"
+                                                                                                        required    />
+                                                </div>
+                                            </div>
+
+                                            
+
+                                            <div class="row_counter">
+                                                <div class="col-sm-6_passw">
+                                                    <label for="">Пароль</label>
+                                                    <input type="password" name="PASS" class="form-control"
+                                                                                                        id="pass"
+                                                                                                        required     />
+                                                                                                        <a href="#" class="password-control"></a>                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="row_counter">
+                                                <div class="col-sm-6_passw">
+                                                    <label for="">Повторите Пароль</label>
+                                                    <input type="password" name="PA2S" class="form-control"
+                                                                                                        id="pa2s"
+                                                                                                        required />
+                                                                                                        <a href="#" class="password_control"></a>
+                                                </div>
+                                            </div>
+                                            <p id="valid"></p>
+                                            
+                                                   
+                                                
+                                    
+                                    <p><input type="submit" id="submit_button" value="Регистрация"></p>
+                                   
+                                </div>
+                    </form>        
+                        
+                                                   
+                    </div>
+            </section>
+
+        </div>
+
+        
+        </section>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+                
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                
+            }
+
+            $("#position").on('change', function(){
+    if($(this).val() == 14){
+        $("#home-id").show() ;
+        $('#home-id').css('display', 'flex');
+        $('#home-id').css('flex-direction', 'column');
+        $("#apart-id").show();
+        $('#apart-id').css('display', 'flex');
+        $('#apart-id').css('flex-direction', 'column');
+    } else {
+        $("#home-id").hide();
+        $("#apart-id").hide();
+    }
+})
+
+$("#position").on('change', function(){
+    if($(this).val() == 12){
+        $("#sotr-id").show() ;
+        $('#sotr-id').css('display', 'flex');
+        $('#sotr-id').css('flex-direction', 'column');
+        
+    } else {
+        $("#sotr-id").hide();
+        
+    }
+})
+
+$('body').on('click', '.password-control', function(){
+	if ($('#pass').attr('type') == 'password'){
+		$(this).addClass('view');
+		$('#pass').attr('type', 'text');
+	} else {
+		$(this).removeClass('view');
+		$('#pass').attr('type', 'password');
+	}
+	return false;
+});
+
+$('body').on('click', '.password_control', function(){
+	if ($('#pa2s').attr('type') == 'password'){
+		$(this).addClass('view');
+		$('#pa2s').attr('type', 'text');
+	} else {
+		$(this).removeClass('view');
+		$('#pa2s').attr('type', 'password');
+	}
+	return false;
+});
+
+$(document).ready(function() {$("#pass, #pa2s").keyup(validate);});
+
+function validate() {
+  var pass1 = $("#pass").val();
+  var pass2 = $("#pa2s").val();
+
+  if (pass1 == pass2) {$("#valid").text("Пароли совпадают");
+  } else {$("#valid").text("Пароли не совпадают");}
+}
+
+            </script>
+</body>
+</html>

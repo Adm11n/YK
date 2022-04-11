@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание Заявки</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <p class="zag">Профиль</p>
+      <ul>
+        <li class="li_zap">ФИО : Тюрин Н.Е</li>
+        <li class="li_zap">Дом : Большая Красная 12</li>
+        <li class="li_zap">Квартира : 339</li>
+        <li class="li_zap">Должность : Пользователь</li>
+        
+      </ul>
+      <p class="exip"><a href="#" class="exit">Выход</a></p>
+      </div>
+        <section class="MAIN">
+        <div id="leftSidebar">
+            <button class="first2" onclick="openNav()" type="button" ></button>
+  
+  
+ 
+           
+            <aside class="sidebar">
+                <div class="name"><a href="../index.html" style="text-decoration: none; color: rgb(190, 190, 190); ">ООО «Управляющая компания «Плюшевая прошка»</a></div>
+            <hr/>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="../news/news.html">
+                            <i class="i_news"></i>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../kont/tsz.html">
+                            <i class="i_tsz"></i>
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../otchet/otchet.html">
+                            <i class="i_otchet"></i>
+                            <span>Отчетность</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="i_custom"></i>
+                            <span>Подача заявлений</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+            
+                
+           
+            
+        </div>
+        <div id="main">
+            <section class="content">
+                <div class="container">
+
+                    <h1>Подача Заявлений</h1>
+                            <hr/>
+                            <form name="statement" id="statementForm" enctype="multipart/form-data">
+                                <div class="form">
+                            
+                                                                <div class="row counter">
+                                                <div class="col-sm-8">
+                                                    <label for="">Обращение</label>
+                                                    <select class="form-control" name="houses" id="house">
+                                                                                        <option value="13">Уборка двора</option>
+                                                                                            <option value="14">Элетросеть</option>
+                                                                                            <option value="12">Крыша</option>
+                                                                                            <option value="10">Подвал</option>
+                                                                                            <option value="11">Отопление</option>
+                                                                                            <option value="15">Да </option>
+                                                                                            <option value="18">Да да</option>
+                                                                                            <option value="16">Ну</option>
+                                                                                            <option value="17">ЧЕЛ ХОРОШ</option>
+                                                                                    </select>
+                                                </div>
+                                            </div>
+                                                                           
+                                                                            <div class="row_counter">
+                                                <div class="col-sm-6">
+                                                    <label for="">Email</label>
+                                                    <input type="text" name="EMAIL" class="form-control"
+                                                                                                        id="email"
+                                                                                                        required   />
+                                                </div>
+                                            </div>
+                                                                            <div class="row_counter">
+                                                <div class="col-sm-6">
+                                                    <label for="">Сообщение</label>
+                                                    <textarea name="MESSAGE" class="form-control"  style="    background: #f2f2f2;
+                                border: 3px solid #f2f2f2;
+                                height: 102px;
+                                
+                                box-shadow: 0 0 0 #f2f2f2 inset;
+                                transition: none;
+                                -webkit-appearance: none;"></textarea>
+                                                </div>
+                                            </div>
+                                                                            <div class="row_counter">
+                                                <div class="col-sm-6">
+                                                     <input name="FILE" class=typefile  size="20" type="file" /><span class="bx-input-file-desc"></span>                    </div>
+                                            </div>
+                                                
+                                    <input type="hidden" name="iblock" value="11"/>
+                            
+                                    <p>
+                                        <button class="button">Подать заявление</button>
+                                    </p>
+                                </div>
+                    </form>        
+                        
+                                                   
+                    </div>
+            </section>
+
+        </div>
+
+        
+        </section>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+                
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                
+            }
+            </script>
+</body>
+</html>

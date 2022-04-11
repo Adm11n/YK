@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор заданий</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+    <script type="text/javascript" src="../../jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <p class="zag">Профиль</p>
+      <ul>
+        <li class="li_zap">ФИО : Олег</li>
+        <li class="li_zap">Должность : Сотрудник</li>
+        <li class="li_zap">Должность Сотрудника : Дворник</li>
+      </ul>
+      <p class="exip"><a href="#" class="exit">Выход</a></p>
+      </div>
+        <section class="MAIN">
+        <div id="leftSidebar">
+            <button class="first2" onclick="openNav()" type="button" ></button>
+  
+  
+ 
+           
+            <aside class="sidebar">
+                <div class="name"><a href="#" style="text-decoration: none; color: rgb(190, 190, 190); ">ООО «Управляющая компания «Плюшевая прошка»</a></div>
+            <hr/>
+            <nav class="menu">
+                <ul>
+                    
+                    <li class="active">
+                        <a href="#">
+                            <i class="i_custom"></i>
+                            <span>Выбор заданий</span>
+                        </a>
+                    </li>
+                   
+
+
+                </ul>
+            </nav>
+        </aside>
+            
+                
+           
+            
+        </div>
+        <div id="main">
+            <section class="content">
+                <div class="container">
+
+                    <h1>Выбор Заданий</h1>
+                            <hr/>
+                    
+                                                   
+                    </div>
+                    <div class="control_main">
+                        <section class="control_sec">
+                            <a href="#" id="control_form" class="control_a"><div class="control-menu"> 
+                                <div class="control-levo">
+                                    <div class="levo-verh">
+                                        Заявление №...
+                                    </div>
+                                    <div class="levo-seredina">
+                                        Задача:
+                                    </div>
+                                    <div class="levo-vniz">
+                                        От кого : 
+                                    </div>
+                                </div> 
+                                
+                            </div></a>
+                            <div class="control-menu">  
+                            </div>
+                        </section>
+                    </div>        
+            </section>
+            
+        </div>
+
+        <div class="fadep">
+            <div class="up">
+                <a class="pclose" href="#">Закрыть</a>
+                <div class="div_nach">
+                <p class="p_othet">Создание отчета</p>
+                </div>
+                <form id="solid">
+                    <div class="file_div">
+                    <input type="file" id="addImages" multiple="">
+                    </div>
+                    <div class="div_butt">
+                    <input type="button" id="vse" value="Отправить">
+                    </div>
+                </form>
+            </div>		
+        </div>
+        </section>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+                
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                
+            }
+            $(document).ready(function(){
+ 
+ 
+                $(document).ready(function($) {
+	$('#control_form').click(function() {
+		$('.fadep').fadeIn();
+		return false;
+	});	
+	
+	$('.pclose').click(function() {
+		$(this).parents('.fadep').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.fadep').fadeOut();
+		}
+	});
+	
+	$('.fadep').click(function(e) {
+		if ($(e.target).closest('.up').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+});       
+ 
+
+
+
+});
+          
+            
+            </script>
+</body>
+</html>

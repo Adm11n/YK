@@ -1,0 +1,538 @@
+div{
+    margin: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    
+}
+
+
+#leftSidebar{
+    background-color: rgb(54, 53, 53);
+}
+
+#main{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+}
+
+#leftSidebar{
+    position: fixed;
+    float: left;
+    height: 715px;
+    width: 300px;
+}
+
+#main{
+    
+    height: 715px;
+    margin-left: 300px;
+    margin-right: auto;
+    
+}
+section{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+ .name {
+    color: #f0f0f0;
+    margin: 3px 0 0;
+    font-family: "Bitter", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    width: 70%;
+    max-width: 200px;
+    margin-left: 40px;
+    margin-top: 40px;
+    
+}
+.sidebar .menu ul li a {
+    display: block;
+    padding: 10px 20px 10px 78px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    
+    
+}
+.sidebar .menu ul li a i {
+    position: absolute;
+    left: 40px;
+    top: 8px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    
+    
+    background-repeat: no-repeat;
+    background-size: 168px 72px;
+
+    
+}
+
+
+
+
+
+:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+li {
+    text-align: -webkit-match-parent;
+}
+body{
+    line-height: 20px;
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a:hover{
+    color: coral;
+}
+
+.sidebar .menu ul li a:hover{
+    color:coral;
+    
+  
+}
+
+
+.sidebar .menu ul li a .i_news{
+    background: url("../../images/white1.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+.sidebar .menu ul li a:hover .i_news{
+    background: url("../../images/orange1.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+
+.sidebar .menu ul li a .i_tsz{
+    background: url("../../images/white2.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+.sidebar .menu ul li a:hover .i_tsz{
+    background: url("../../images/orange2.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+
+.sidebar .menu ul li a .i_otchet{
+    background: url("../../images/white3.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+.sidebar .menu ul li a:hover .i_otchet{
+    background: url("../../images/orange3.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+.sidebar .menu ul li a .i_custom{
+    background: url("../../images/orange7.png") no-repeat; /* изображение по умолчанию */
+    height: 120px; /* высота изображения */
+    width: 120px; /* ширина изображения */
+
+}
+.sidebar .menu ul li.active a{
+    color: coral;
+}
+.sidebar .menu ul li.active a:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -12px 0 0 0;
+    content: '';
+    border-right: 12px solid #fff;
+    border-top: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+
+.sidebar hr{
+    margin: 34px 0;
+}
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    margin-top: 1em;
+    margin-bottom: 20px;
+    padding: 0;
+    position: relative;
+}
+hr:after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #cccccc;
+    left: 0;
+    top: 0;
+}
+
+.hr_news hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    margin: 2em 0;
+    padding: 0;
+    position: relative;
+}
+.hr_news hr:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #cccccc;
+    left: 0;
+    top: 0;
+}
+
+
+.container {
+    padding-right: 300px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: 300px;
+}
+
+.content .container .form{
+    display: block;
+    margin-top: 0em;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    overflow: auto;
+    visibility:hidden;
+    opacity: 0;
+    transition: opacity 0.7s ease-in 0s;
+}
+.popup {
+    top: 0;
+    left: 0;
+    right: 0;       
+    font-size: 14px;
+    height: 100%;
+    
+    max-width: 300px;
+    position: fixed;
+    
+    
+    background-color: #fcfcfc;
+    z-index: 1000;
+    border-radius: 10px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    
+}
+.close {
+    top: 10px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background: url(../../images/strelka_l.png); background-size: 100% ;
+    
+    cursor: pointer;
+    outline: none;
+}
+.close:before {
+    
+    
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    
+}
+.close:hover {
+    background: url(../../images/strelka_l_oran.png); background-size: 100%;
+}
+.li_zap{
+  list-style-type: none;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-left: 38px;
+  
+}
+
+.first2{
+  background: url(../../images/menu_w.png); background-size: 100% ;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none;
+  
+}
+   .first2:hover {
+  background: url(../../images/menu_or.png); background-size: 100%;
+}
+
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(242, 236, 236);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #5e5c5c;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.prof_li{
+    list-style-type: none;
+}
+.prof_main{
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.prof_ex{
+   text-align: center;}
+   a.button7 {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(255, 0, 0);
+  box-shadow: 0 -3px rgb(0, 0, 0) inset;
+  transition: 0.2s;
+} 
+a.button7:hover { background: rgb(243, 49, 49); }
+a.button7:active {
+  background: rgb(236, 51, 51);
+  box-shadow: 0 3px rgb(0, 0, 0) inset;
+}
+
+.first2{
+    background: url(../../images/menu_w.png); background-size: 100% ;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: none;
+    
+  }
+     .first2:hover {
+    background: url(../../images/menu_or.png); background-size: 100%;
+  }
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}}
+
+  .popup {
+    top: 0;
+    left: 0;
+    right: 0;       
+    font-size: 14px;
+    height: 100%;
+    
+    max-width: 300px;
+    position: fixed;
+    
+    
+    background-color: #fcfcfc;
+    z-index: 1000;
+    border-radius: 10px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+  }
+
+  .li_zap{
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-left: 38px;
+    
+  }
+
+  #mySidenav.popup p.zag{margin:20px 0 10px;padding:0 0 6px;color:tomato;font-size:16px;font-weight:bold;border-bottom:1px solid tomato;
+    margin-left: 40px;font-size: 20px;}
+
+    .li_zap p{
+        margin-top: 50px;
+        
+    }  
+
+    p.zag{
+        font-size: 30px;
+        font-weight: bolder;
+        margin-left: 38px;
+        margin-bottom: 20px;
+        color: coral;
+        
+    }
+
+   
+
+    .exit{
+        margin-left: 38px;
+        margin-right: 128px;
+        
+    }
+
+    a.exit{
+        
+        background-color: coral;
+     }
+
+    p.exip{
+        margin-top: 20px;
+    } 
+
+
+
+
+
+
+    .section {
+        display: block;
+    }
+
+   .section .container {
+        
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+ 
+
+  .container h1 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-top: 50px;
+    font-weight: bolder;
+    margin-bottom: 70px;
+
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.col-sm-6{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-sm-8{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-sm-6 label{
+    line-height: 50px;
+    font-weight: bolder;
+    
+    font-size: larger;
+    color: rgb(175, 175, 175)
+}
+
+.col-sm-8 label{
+    line-height: 50px;
+    color: rgb(175, 175, 175);
+    font-weight: bolder;
+    font-size: larger;
+    
+}
+
+.button{
+    margin-top: 50px;
+    color:coral;
+    width: 250px; height: 50px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    border-color: coral;
+    
+}
+
+.button:hover{
+    background-color: coral;
+    color: #ffffff;
+}
+#email{
+    height: 30px;
+    width: 300px;
+    background-color:#f2f2f2;
+    
+}
+
+#email:active{
+    border-color: coral;
+}
+
+#house{
+    height:40px ;
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+

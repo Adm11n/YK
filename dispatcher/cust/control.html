@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контроль исполнения</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+    <script type="text/javascript" src="../../jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <p class="zag">Профиль</p>
+      <ul>
+        <li class="li_zap">ФИО : Тюрин Н.Е</li>
+        <li class="li_zap">Должность : Диспетчер</li>
+        
+      </ul>
+      <p class="exip"><a href="#" class="exit">Выход</a></p>
+      </div>
+        <section class="MAIN">
+        <div id="leftSidebar">
+            <button class="first2" onclick="openNav()" type="button" ></button>
+  
+  
+ 
+           
+            <aside class="sidebar">
+                <div class="name"><a href="#" style="text-decoration: none; color: rgb(190, 190, 190); ">ООО «Управляющая компания «Плюшевая прошка»</a></div>
+            <hr/>
+            <nav class="menu">
+                <ul>
+                    
+                    <li class="active">
+                        <a href="#">
+                            <i class="i_custom"></i>
+                            <span>Контроль исполнения</span>
+                        </a>
+                    </li>
+                   
+
+
+                </ul>
+            </nav>
+        </aside>
+            
+                
+           
+            
+        </div>
+        <div id="main">
+            <section class="content">
+                <div class="container">
+
+                    <h1>Контроль исполнения</h1>
+                            <hr/>
+                    
+                                                   
+                    </div>
+                    <div class="control_main">
+                        <section class="control_sec">
+                            <div class="control-menu">
+                                <div class="otchet_nom">Заявка №</div>
+                                <div class="control_vniz">
+                                    <div class="contol_block">
+                                        <p class="img_contr"><img  src="../../images/green1.png"></p>
+                                        <div class="control_name">Заявка принята</div>
+                                    </div>
+                                    <div class="indicator">
+                                       <div class="bar"></div>
+                                    </div>
+                                    
+                                   <div class="contol_block">
+                                    <a href=""> <p class="img_contr"><img   src="../../images/2_iz.png" id='myImg' ></p>
+                                        <div class="control_name">Выбор Сотрудника</div></a>
+                                        <ul class="submenu">
+                                            <form id="from">
+                                            <li><input type="radio" id="1" name="ava" value="1">
+                                                <label for="1">Электрик Саня</label></li>
+                                            <li><input type="radio" id="2" name="ava" value="2">
+                                                <label for="2">Дворник Акакий</label></li>
+                                            <li><input type="radio" id="3" name="ava" value="3">
+                                                <label for="3">Олег</label></li>
+                                            <li>
+                                                <input type="button" id="nagmi_na_meni" value="Нажми на меня">
+                                            </li>    
+                                            </form>
+                                        </ul>
+                                            
+                                       
+                                   
+                                    
+                                    </div>
+                                    <div class="indicator">
+                                        <div class="bar"></div>
+                                     </div>
+                                    <a href="" class="a_othet"><div class="contol_block" id="otchet_form">
+                                        <p class="img_contr"><img id="Myimg" src="../../images/3_iz.png"></p>
+                                        <div class="control_name">Формирование отчета</div>
+                                    </div></a>
+                                    <div class="indicator">
+                                        <div class="bar"></div>
+                                     </div>
+                                    <div class="contol_block">
+                                        <p class="img_contr"><img id="MYimg"  src="../../images/4_iz.png"></p>
+                                        <div class="control_name">ДЕЛО СДЕЛАННо</div>
+                                    </div>
+
+                                </div>
+                                <a href="#" class="control-close"></a>
+                            </div>
+                        </section>
+                    </div>        
+            </section>
+            
+        </div>
+        <div class="fadep">
+            <div class="up">
+                <a class="pclose" href="#">Закрыть</a>
+                <div class="div_nach">
+                <p class="p_othet">Создание отчета</p>
+                </div>
+                <form id="solid">
+                    <textarea name="message" class="message"></textarea>
+                    <div class="div_mess">
+                    <input type="button" id="nu_vot_i_vse" value="Отправить">
+                    </div>
+                </form>
+            </div>		
+        </div>
+        
+        </section>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+                
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                
+            }
+            $(document).ready(function(){
+ 
+ 
+      
+ $('#nagmi_na_meni').click(function(){
+
+$("#myImg").attr('src','../../images/green2.png');
+$('.submenu').hide();
+$('.a_othet').css('pointer-events','auto');
+
+});
+
+$('#nu_vot_i_vse').click(function(){
+    $('.fadep').hide();
+$("#Myimg").attr('src','../../images/green3.png');
+$("#MYimg").attr('src','../../images/green4.png');
+    
+
+});
+
+
+});
+$(document).ready(function($) {
+	$('#otchet_form').click(function() {
+		$('.fadep').fadeIn();
+		return false;
+	});	
+	
+	$('.pclose').click(function() {
+		$(this).parents('.fadep').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.fadep').fadeOut();
+		}
+	});
+	
+	$('.fadep').click(function(e) {
+		if ($(e.target).closest('.up').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+});       
+            
+            </script>
+</body>
+</html>
