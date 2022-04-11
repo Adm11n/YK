@@ -62,18 +62,25 @@
                     <div class="control_main">
                         <section class="control_sec">
                             <div class="control-menu">
-                                <div class="otchet_nom">Заявка №</div>
+                                <div class="otchet_nom"><select class="otchet_nom_sel" id="sel_nom">
+                                    <option value="0">Выберите Заявление</option>
+                                                                                            <option class="export_option" value="1">Заявление №12900281</option>
+                                                                                            <option class="export_option" value="2">Заявление №129002281</option>
+                                                                                            <option class="export_option" value="3">Заявление №1290312</option>
+                                                                                            <option class="export_option" value="4">Заявление №1281</option>
+                                </select></div>
                                 <div class="control_vniz">
                                     <div class="contol_block">
-                                        <p class="img_contr"><img  src="../../images/green1.png"></p>
+                                        <p class="img_contr"><img  src="../../images/1_iz.png" id="M1"></p>
                                         <div class="control_name">Заявка принята</div>
                                     </div>
                                     <div class="indicator">
                                        <div class="bar"></div>
                                     </div>
-                                    
+                                   
+                                    <a href="" class="a_vibor_sot">
                                    <div class="contol_block">
-                                    <a href=""> <p class="img_contr"><img   src="../../images/2_iz.png" id='myImg' ></p>
+                                     <p class="img_contr"><img   src="../../images/2_iz.png" id='myImg' ></p>
                                         <div class="control_name">Выбор Сотрудника</div></a>
                                         <ul class="submenu">
                                             <form id="from">
@@ -162,9 +169,18 @@ $("#MYimg").attr('src','../../images/green4.png');
     
 
 });
-
+$(function() {
+  $('#sel_nom').on('change', function(){
+    var value = $(this).val();
+    $("#M1").attr('src','../../images/green1.png');
+    $('.a_vibor_sot').css('pointer-events','auto');
+    
+  });
+});
 
 });
+
+
 $(document).ready(function($) {
 	$('#otchet_form').click(function() {
 		$('.fadep').fadeIn();
@@ -188,7 +204,8 @@ $(document).ready(function($) {
 			$(this).fadeOut();					
 		}
 	});
-});       
+});    
+  
             
             </script>
 </body>
