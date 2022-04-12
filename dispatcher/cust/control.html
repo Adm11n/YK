@@ -75,7 +75,7 @@
                                         <div class="control_name">Заявка принята</div>
                                     </div>
                                     <div class="indicator">
-                                       <div class="bar"></div>
+                                       <div class="bar-1"></div>
                                     </div>
                                    
                                     <a href="" class="a_vibor_sot">
@@ -84,15 +84,43 @@
                                         <div class="control_name">Выбор Сотрудника</div></a>
                                         <ul class="submenu">
                                             <form id="from">
-                                            <li><input type="radio" id="1" name="ava" value="1">
-                                                <label for="1">Электрик Саня</label></li>
-                                            <li><input type="radio" id="2" name="ava" value="2">
-                                                <label for="2">Дворник Акакий</label></li>
-                                            <li><input type="radio" id="3" name="ava" value="3">
-                                                <label for="3">Олег</label></li>
+                                            <li><a href="#" >Дворники</a>
+                                                <ul class="sub-submenu">
+                                                    <li><input type="radio" id="1" name="ava" value="1">
+                                                        <label for="1"> Саня</label></li>
+                                                    <li><input type="radio" id="2" name="ava" value="2">
+                                                        <label for="2">Миша</label></li>
+                                                    <li><input type="radio" id="3" name="ava" value="3">
+                                                        <label for="3">Кирилл</label></li>
+                                                        
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Электрики</a>
+                                                <ul class="sub-submenu">
+                                                    <li><input type="radio" id="1" name="ava" value="1">
+                                                        <label for="1"> Андрей</label></li>
+                                                    <li><input type="radio" id="2" name="ava" value="2">
+                                                        <label for="2">Костя</label></li>
+                                                    <li><input type="radio" id="3" name="ava" value="3">
+                                                        <label for="3">Дима</label></li>
+                                                         
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Монтажники</a>
+                                                <ul class="sub-submenu">
+                                                    <li><input type="radio" id="1" name="ava" value="1">
+                                                        <label for="1"> Алексей</label></li>
+                                                    <li><input type="radio" id="2" name="ava" value="2">
+                                                        <label for="2">Егор</label></li>
+                                                    <li><input type="radio" id="3" name="ava" value="3">
+                                                        <label for="3">Максим</label></li>
+                                                         
+                                                </ul>
+                                            </li>
+                                            
                                             <li>
                                                 <input type="button" id="nagmi_na_meni" value="Нажми на меня">
-                                            </li>    
+                                            </li>   
                                             </form>
                                         </ul>
                                             
@@ -101,14 +129,14 @@
                                     
                                     </div>
                                     <div class="indicator">
-                                        <div class="bar"></div>
+                                        <div class="bar-2"></div>
                                      </div>
                                     <a href="" class="a_othet"><div class="contol_block" id="otchet_form">
                                         <p class="img_contr"><img id="Myimg" src="../../images/3_iz.png"></p>
                                         <div class="control_name">Формирование отчета</div>
                                     </div></a>
                                     <div class="indicator">
-                                        <div class="bar"></div>
+                                        <div class="bar-3"></div>
                                      </div>
                                     <div class="contol_block">
                                         <p class="img_contr"><img id="MYimg"  src="../../images/4_iz.png"></p>
@@ -159,22 +187,29 @@
 $("#myImg").attr('src','../../images/green2.png');
 $('.submenu').hide();
 $('.a_othet').css('pointer-events','auto');
-
+$('.bar-1').css("background","#1dfa09");
+$(".bar-2").css("background-image","repeating-linear-gradient(45deg,transparent,transparent 4px,#f1c40f 4px,#f1c40f 8px)")
 });
 
-$('#nu_vot_i_vse').click(function(){
-    $('.fadep').hide();
-$("#Myimg").attr('src','../../images/green3.png');
-$("#MYimg").attr('src','../../images/green4.png');
-    
 
-});
 $(function() {
   $('#sel_nom').on('change', function(){
     var value = $(this).val();
     $("#M1").attr('src','../../images/green1.png');
-    $('.a_vibor_sot').css('pointer-events','auto');
-    
+    $(".bar-1").css("background-image","repeating-linear-gradient(45deg,transparent,transparent 4px,#f1c40f 4px,#f1c40f 8px)")
+    $(".contol_block").hover(function() {
+  $('.submenu li').css("display","block")
+  
+   
+  $('#nu_vot_i_vse').click(function(){
+    $('.fadep').hide();
+$("#Myimg").attr('src','../../images/green3.png');
+$("#MYimg").attr('src','../../images/green4.png');
+$('.bar-2').css("background","#1dfa09"); 
+$('.bar-3').css("background","#1dfa09");     
+});
+});
+
   });
 });
 

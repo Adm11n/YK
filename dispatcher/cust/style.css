@@ -468,11 +468,7 @@ a.button7:active {
     position: relative;
 }
 
-:root {
-    --colour1: #f1c40f;
-    --colour2: #2c3e50;
-    --speed: 4s;
-  }
+
 
   @keyframes slide {
     from {
@@ -482,7 +478,7 @@ a.button7:active {
       background-position-x: 113px;
     }
   }
-  .bar {
+  .bar-1 {
     
     margin-top: 18px;
     min-height: 10px;
@@ -496,16 +492,52 @@ a.button7:active {
     }
     box-shadow: 0px 10px 13px -6px rgba(44, 62, 80, 1);
     
-    background-color: var(--colour2);
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 4px,
-      var(--colour1) 4px,
-      var(--colour1) 8px
-    );
+    background-color: #2c3e50;
+    
 
-    animation: slide var(--speed) linear infinite;
+    animation: slide 4s linear infinite;
+    will-change: background-position;
+  }
+
+  .bar-2 {
+    
+    margin-top: 18px;
+    min-height: 10px;
+    border-radius: 10px;
+    width: calc(40px * 4);
+    @media only screen and (max-width: 450px) {
+      width: calc(40px * 3);
+    }
+    @media only screen and (max-width: 350px) {
+      width: calc(40px * 2);
+    }
+    box-shadow: 0px 10px 13px -6px rgba(44, 62, 80, 1);
+    
+    background-color: #2c3e50;
+    
+
+    animation: slide 4s linear infinite;
+    will-change: background-position;
+  }
+
+  .bar-3 {
+    
+    margin-top: 18px;
+    min-height: 10px;
+    border-radius: 10px;
+    width: calc(40px * 4);
+    @media only screen and (max-width: 450px) {
+      width: calc(40px * 3);
+    }
+    @media only screen and (max-width: 350px) {
+      width: calc(40px * 2);
+    }
+    box-shadow: 0px 10px 13px -6px rgba(44, 62, 80, 1);
+    
+    background-color: #2c3e50;
+   
+
+    animation: slide 4s linear infinite;
     will-change: background-position;
   }
  
@@ -525,13 +557,37 @@ label{
           
           margin-right: 30px; }
         .submenu li{display: none;
-            margin-top: 10px;
-     
+            margin:10px;
+            padding: 0px;
             border: solid #0000000c; }
 
-.contol_block:hover > .submenu li{
+
+
+.submenu  li a{
+    font-size: 20px;
+    display: block;
+    
+    color: coral;
+}
+.submenu li > .sub-submenu {
+    position: absolute;
+    left: 155px;
+    top:-1px;
+    display: none;
+}
+.sub-submenu li{
+    width: 150px;
+    height: 21px;
+}
+.sub-submenu li label{
+    color: coral;
+}
+
+.submenu li:hover > .sub-submenu{
     display: block;
 }
+
+
 
 .submit{
     width: 80px;
@@ -586,11 +642,11 @@ label{
 }
 
 #nagmi_na_meni{
-    width: 160px; background-color: chartreuse;
+    width: 153px; background-color:coral;
 }
 
 #nu_vot_i_vse{
-    width: 160px; background-color: chartreuse;
+    width: 160px; background-color:coral;
 }
 .div_mess{
     text-align: center;
@@ -600,4 +656,6 @@ label{
     text-decoration: none;
     pointer-events: none;
 }
+
+
 
